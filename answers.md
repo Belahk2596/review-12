@@ -5,7 +5,7 @@
 App.jsx
 
 ```jsx
-// Write your code here
+import Gallery from './components/Gallery.jsx';
 
 ```
 
@@ -27,22 +27,22 @@ const props = {
   rating: 4.5, // out of 5
 };
 
-// Write your code here
+const { name, packaging, temperature } = props;
 
 
 ```
 
 ### 3. State in React
 
-
+State uses internal data to store that data you can use in your components. Anything that changes on your website is considered state and does not reload the page but it re-renders the components. 
 
 ### 4. Using state in React
 
 ```jsx
-
+import { useState } from 'react';
 
 function Tea(props) {
-  // Add your code here
+  const [ isBrewing, setState ] = useState(true);
 
 }
 ```
@@ -63,7 +63,7 @@ function Tea(props) {
 
   return <>
     <h1>Tea Time</h1>
-    <button>Check if tea is ready</button>
+    <button onClick={checkTime}>Check if tea is ready</button>
   </>
 }
 ```
